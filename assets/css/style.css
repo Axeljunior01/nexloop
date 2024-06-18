@@ -746,13 +746,9 @@ header.sticky .nav-bar{
   }
 
 
-  .swiper-button-next::after, .swiper-button-prev::after{
-    content: '';
-    
-  }
   .swiper-button-next, .swiper-button-prev{
-    visibility: hidden;
     display: none;
+    visibility: hidden;
 
   }
   .swiper-pagination-bullet, .swiper-pagination-bullet-active{
@@ -1222,6 +1218,7 @@ footer a{
   #MEDIA QUERIES
 \*-----------------------------------*/
 @media screen and (max-width: 1070px){
+    
     /*nav*/
     .navigation{
       position: fixed;
@@ -1290,6 +1287,9 @@ footer a{
     }
     .portifolio-list{
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .porfolio-model img{
+      margin: 0 5px;
     }
     .about .container .content{
       display: grid;
