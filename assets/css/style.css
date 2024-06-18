@@ -752,8 +752,8 @@ header.sticky .nav-bar{
   }
   .swiper-button-next, .swiper-button-prev{
     visibility: hidden;
-    color: var(--second-color);
-    font-size: 3em;
+    display: none;
+
   }
   .swiper-pagination-bullet, .swiper-pagination-bullet-active{
     background: var(--second-color);
