@@ -240,57 +240,8 @@ img{ height: auto;}
 /*-----------------------------------*\
   #Swicther
 \*-----------------------------------*/
-.btn-swich{
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 25px;
-  border-radius: 25px;
-  background: #fff;
-  cursor: pointer;
-  transition: 0.5s;
-  box-sizing: inset 0 8px 60px rgba(0,0,0,0.1), inset 0 8px 8px rgba(0,0,0,0.1), inset 0 -4px 4px rgba(0,0,0,0.1);
-}
-.btn-swich.active{
-  background: #222;
-  box-shadow: inset 0 2px 60px rgba(0,0,0,0.1), inset 0 2px 8px rgba(0,0,0,0.1), inset 0 -4px 8px rgba(0,0,0,0.05);
-}
-.btn-swich .indicator{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1), inset 0 4px 4px rgba(255,255,255,1), inset 0 -4px 4px rgba(255,255,255,1);
-  border-radius: 50%;
-  transform: scale(0.9);
-  transition: 0.5s;
-}
-.btn-swich.active .indicator{
-  left: 25px;
-  background: linear-gradient(to bottom, #444, #222);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 4px 4px rgba(255,255,255,0.2), inset 0 -4px 4px rgba(255,255,255,0.2);
-}
-.btn-swich.star{
-  position: absolute;
-  z-index: 100;
-  justify-content: space-between;
-  padding: 0;
-  margin-top: 4px;
-}
 
 
-.btn-swich .star .fa-sun{
-  color: #222;
-  margin-left: 4px;
-}
-
-.btn-swich .fa-moon{
-  color: #fff;
-  margin-left: 8px;
-}
-/*
 #toggle{
   position: relative;
   display: block;
@@ -303,7 +254,7 @@ img{ height: auto;}
   box-sizing: inset 0 8px 60px rgba(0,0,0,0.1), inset 0 8px 8px rgba(0,0,0,0.1), inset 0 -4px 4px rgba(0,0,0,0.1);
 
 }
-#toggle.active{
+#toggle.sun{
   background: #222;
   box-shadow: inset 0 2px 60px rgba(0,0,0,0.1), inset 0 2px 8px rgba(0,0,0,0.1), inset 0 -4px 8px rgba(0,0,0,0.05);
 
@@ -317,17 +268,16 @@ img{ height: auto;}
   height: 25px;
   background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1), inset 0 4px 4px rgba(255,255,255,1), inset 0 -4px 4px rgba(255,255,255,1);
-
-
   border-radius: 50%;
   transform: scale(0.9);
   transition: 0.5s;
 }
-#toggle.active .indicator{
+#toggle.sun .indicator{
   left: 25px;
   background: linear-gradient(to bottom, #444, #222);
   box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 4px 4px rgba(255,255,255,0.2), inset 0 -4px 4px rgba(255,255,255,0.2);
 }
+
 #toggle .star{
   position: absolute;
   z-index: 100;
@@ -345,7 +295,8 @@ img{ height: auto;}
 #toggle .fa-moon{
   color: #fff;
   margin-left: 8px;
-}*/
+}
+
 
 .btn{
   background: var(--second-color);
@@ -1285,6 +1236,50 @@ footer a{
       cursor: pointer;
       display: block;
     }
+
+
+    #toggle{
+      width: 25px;
+      height: 12.5px;
+      border-radius: 25px;
+      top: 10px;
+
+    }
+
+    
+    #toggle .indicator{
+      top: 0;
+      left: 0;
+      width: 12.5px;
+      height: 12.5px;
+
+    }
+    #toggle.sun .indicator{
+      left: 12.5px;
+    }
+    
+    #toggle .star{
+      padding: 0;
+      margin-top: 2px;
+    }
+    
+    
+    #toggle .star .fa-sun{
+      margin-left: 2px;
+      visibility: hidden;
+    }
+    
+    #toggle .fa-moon{
+      margin-left: 4px;
+      visibility: hidden;
+    }
+    
+
+
+
+
+
+
     .portifolio-list{
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
@@ -1308,6 +1303,9 @@ footer a{
       display: grid;
       width: 100%;
       row-gap: 20px;
+    }
+    .image-stack{
+      border-bottom: 1px solid var(--second-color);
     }
     .image-stack-2 img{
       min-width: 0;
@@ -1350,6 +1348,9 @@ footer a{
     .footer-container .info ul{
       align-items: center;
       flex-direction: column;
+    }
+    .footer-container .info a{
+      margin: 20px 0;
     }
     .footer-container .info ul li{
       margin: 5px 0;
