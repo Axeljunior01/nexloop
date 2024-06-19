@@ -19,17 +19,37 @@ navItems.forEach((navItem) => {
 });
 
 
+//scroll to top
+const scrollTopBtn = document.querySelector(".scrollToTop-btn");
 
+window.addEventListener("scroll", function(){
+    scrollTopBtn.classList.toggle("active", window.scrollY > 500);
+});
 
-//Dark/Light
+scrollTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
-//swi
-//const body = document.querySelector('body');
-//const toggle = document.getElementById('toggle');
-//toggle.onclick = function(){
-  //  toggle.classList.toggle('active')
-    //body.classList.toggle('active')
-//}
+//navigatio
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop -50;
+        let id= current.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY<= sectionTop + sectionHeight){
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
+        }
+        else{
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+        }
+    });
+});
+
 
 //Dark/Light
 const themeBtn = document.querySelector(".btn-swich");
@@ -122,3 +142,26 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  //animation
+  //commom
+  ScrollReveal({
+    reset: true,
+    distance:'60px',
+    duration:2500,
+    delay: 100
+});
+
+//specify 
+ScrollReveal().reveal('.hero .hero-subtitle',{ delay: 300, origin:'top' });
+ScrollReveal().reveal('.hero h1, .section-title-01, .section-title-02',{ delay: 500, origin:'left' });
+ScrollReveal().reveal('.hero  .hero-text, .about-info',{ delay: 600, origin:'right' });
+ScrollReveal().reveal('.media-icons i, .contact-left li',{ delay: 500, origin:'right', interval: 200 });
+ScrollReveal().reveal('.hero  .btn',{ delay: 600, origin:'bottom' });
+ScrollReveal().reveal('.hero-banner, .about-img, .image-stack',{ delay: 500, origin:'bottom' });
+ScrollReveal().reveal('.about .description, .contact-right',{ delay: 600, origin:'right' });
+ScrollReveal().reveal('.service-card, .features-info',{ delay: 700, origin:'left' });
+ScrollReveal().reveal('.services-description, .contact-card, .contact-left h2',{ delay: 700, origin:'left' });
+ScrollReveal().reveal('.service-card, .portifolio .img-card',{ delay: 800, origin:'bottom', interval: 200 });
+ScrollReveal().reveal('footer .group',{ delay: 500, origin:'top', interval: 200 });
+
