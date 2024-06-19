@@ -1327,17 +1327,8 @@ footer a{
 
     .hero-subtitle{
       font-size: 14px;
-      font-weight: 500;
       margin: 0 auto;
     
-      padding-right: 0;
-    
-      
-      
-    
-      
-    
-      animation: mark .5s step-end infinite, write 6s steps(22, end) infinite;
     }
     .portifolio-list{
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
