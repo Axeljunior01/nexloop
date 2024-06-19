@@ -1324,6 +1324,9 @@ footer a{
       margin-left: 4px;
       visibility: hidden;
     }
+    .section-banner{
+      margin-top:0;
+    }
 
     .hero-subtitle{
       font-size: 14px;
