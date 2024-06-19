@@ -20,6 +20,16 @@ navItems.forEach((navItem) => {
 
 
 //scroll to top
+const scrollTopBtn = document.querySelector(".scrollToTop-btn");
+
+window.addEventListener("scroll", function(){
+    scrollTopBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 
 //navigatio
@@ -138,7 +148,7 @@ var swiper = new Swiper(".mySwiper", {
   //commom
   ScrollReveal({
     reset: true,
-    distance:'60px',
+    //distance:'60px',
     duration:2500,
     delay: 100
 });
