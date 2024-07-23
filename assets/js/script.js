@@ -153,16 +153,5 @@ var swiper = new Swiper(".mySwiper", {
     delay: 100
 });
 
-//specify 
-ScrollReveal().reveal('.hero .hero-subtitle',{ delay: 300, origin:'top' });
-ScrollReveal().reveal('.hero h1, .section-title-01, .section-title-02',{ delay: 500, origin:'left' });
-ScrollReveal().reveal('.hero  .hero-text, .about-info',{ delay: 600, origin:'right' });
-ScrollReveal().reveal('.media-icons i, .contact-left li',{ delay: 500, origin:'right', interval: 200 });
-ScrollReveal().reveal('.hero  .btn',{ delay: 600, origin:'bottom' });
-ScrollReveal().reveal('.hero-banner, .about-img, .image-stack',{ delay: 500, origin:'bottom' });
-ScrollReveal().reveal('.about .description, .contact-right',{ delay: 600, origin:'right' });
-ScrollReveal().reveal('.service-card, .features-info',{ delay: 700, origin:'left' });
-ScrollReveal().reveal('.services-description, .contact-card, .contact-left h2',{ delay: 700, origin:'left' });
-ScrollReveal().reveal('.service-card, .portifolio .img-card',{ delay: 800, origin:'bottom', interval: 200 });
-ScrollReveal().reveal('footer .group',{ delay: 500, origin:'top', interval: 200 });
+
 
